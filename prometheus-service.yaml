@@ -9,10 +9,11 @@ metadata:
       prometheus.io/port:   '8080'
   
 spec:
+  type: LoadBalancer
   selector: 
     app: prometheus-server
-  type: NodePort  
+  #type: NodePort  
   ports:
     - port: 8080
       targetPort: 9090 
-      nodePort: 30000
+  #    nodePort: 30000
